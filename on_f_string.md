@@ -40,9 +40,8 @@ for i in range(5):#date_list:
 ```python
 file_name = f'report_ITO_{today:%Y-%m-%d}.csv' # 2022-11-30
 
+file_name2 =f'{self.transFile_name_pattern}_{datetime.strptime(temp_day, "%Y%m%d"):%Y%m%d}.csv' 
 
-
- f'{self.transFile_name_pattern}_{unix_day(temp_day)}_{datetime.strptime(temp_day, "%Y%m%d"):%Y%m%d}.csv' 
 ```
 
 
@@ -56,23 +55,7 @@ import numpy as np
 for file in files:
     print(' time + file_name ')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### old style
 a = ['foo', 'bar', 'baz']
 '{0[0]}, {0[2]}'.format(a)
 
@@ -102,11 +85,9 @@ print(f'Price per item is ${price/quantity}')
 
 print(f' {10:#_b} , {10:#_x}')
 
-# The <type> Subcomponent
-
 import numpy as np
 
-n = 280
+n = 28
 
 def divisors(n):
     divisors = []
@@ -124,17 +105,4 @@ def divisors(n):
 
 divisors(n)
 
-def divisors(n):
-    divisors = []
-    for i in range(2, int(np.floor(np.sqrt(n)))):
-        if n % i == 0:
-            # print(i)
-            print(f'n:{n}, i:{i}, n/i:{n/i}')
-            divisors.append(i)
-        # else:
-
-        #     # print(i)
-        #     print(f'n:{n}, i:{i}, n/i:{n/i}')
-
-    return divisors
 ```
