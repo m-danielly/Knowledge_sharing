@@ -4,13 +4,6 @@
 print('%d %s cost $%.2f' % (6, 'bananas', 1.74))
 ```
 
-```sql
-SELECT *
-FROM t1
-WHERE ?
-Group by
-
-```
 ### python f_string print
 ```python
 print(f"{6} {'bananas'} ")
