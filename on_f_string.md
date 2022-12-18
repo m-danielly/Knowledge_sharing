@@ -107,3 +107,14 @@ def divisors(n):
 divisors(n)
 
 ```
+
+
+###Mehdi add it as a test
+```python
+import os
+for root, _, _ in os.walk('C:/Users/mahdi.d/Music'):
+    print(root)
+
+for root, dirs, files in os.walk('C:/Users/mahdi.d/Music'):
+    print(root)
+```
