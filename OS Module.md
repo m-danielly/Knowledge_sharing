@@ -55,16 +55,28 @@ for i in range(5):#date_list:
 file_name = f'report_ITO_{today:%Y-%m-%d}.csv' # 2022-11-30
 
 file_name2 =f'{self.transFile_name_pattern}_{datetime.strptime(temp_day, "%Y%m%d"):%Y%m%d}.csv' 
-
 ```
 
+```python
+for i in range(10):
+    print(f'i square is {i**}')
+```
 
-### Goood reference
-[Python OS libraray reference](https://docs.python.org/3.9/library/os.html)
+```sql
+SELECT date_key, Sum(payload)
+FROM temp_table
+WHERE ?
+GROUP BY ??
+```
+
+### Good reference
+[Python OS libraray reference](https://docs.python.org/3.9/library/os.html) <br>
+
 [30-useful-methods-from-python-os-module](https://www.analyticsvidhya.com/blog/2021/05/30-useful-methods-from-python-os-module/?)
 
 
 [ormatted-string-literals-f-strings-python](https://www.geeksforgeeks.org/formatted-string-literals-f-strings-python)
+
 [Google search page](www.google.com)
 
  ```python 
