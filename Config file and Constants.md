@@ -1,0 +1,2 @@
+[From Novice to Expert: How to Write a Configuration file in Python](https://towardsdatascience.com/from-novice-to-expert-how-to-write-a-configuration-file-in-python-273e171a8eb3)
+[How to chose String Formatting Method](https://engineeringfordatascience.com/posts/python_string_formatting_for_data_science/)
