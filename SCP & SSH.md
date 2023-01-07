@@ -34,10 +34,72 @@ SCP can be called more of a combination of RCP and SSH than a protocol because t
 - DO NOT use the ssh command at all in the same Terminal window.
   If you ssh into Tux, you won't be able to scp to/from your local computer (normally).
 
-Example of how to use SCP : [Samples](https://support.cci.drexel.edu/cci-virtual-lab-resources/scp-or-ssh-or-sftp-gui-or-cli/scp-windows-10-powershell-cli-command-line-interface/)
+#### Example 1
+scp yourTuxUserid@tux.cs.drexel.edu:test.txt "C: \Users\Win10userID\OneDrive - Drexel University\Desktop"\
+or...
+scp mjg88@tux.cs.drexel.edu:test.txt "C: \Users\mjg88\OneDrive - Drexel University\Desktop"\
+
+Copying the test.txt file from your remote Tux home folder to your local Windows PC computer's desktop folder.
+Quotes needed around the Desktop folder path on your computer because of the spaces in the OneDrive folder name.
+Also, need a backslash or \ after the quoted file path to indicate it's a folder.
+
+#### Example 2
+scp yourTuxUserid@tux.cs.drexel.edu:test.txt .
+or...
+scp mjg88@tux.cs.drexel.edu:test.txt .
+
+Copying a file named test.txt from your remote Tux home folder to your local Windows PC computer.
+The period at the end indicates that the file will be copied to the current directory or folder you are in within cmd.exe or PowerShell.
+
+More example of how to use SCP : [Samples](https://support.cci.drexel.edu/cci-virtual-lab-resources/scp-or-ssh-or-sftp-gui-or-cli/scp-windows-10-powershell-cli-command-line-interface/)
+
+
+### PSCP
+
+PSCP, the PuTTY Secure Copy client, is a tool for transferring files securely between computers using an SSH connection.
+If you have an SSH-2 server, you might prefer PSFTP (see chapter 6) for interactive use. PSFTP does not in general work with SSH-1 servers
+
+
+### PSCP Usage
+
+Once you've got a console window to type into, you can just type pscp on its own to bring up a usage message. This tells you the version of PSCP you're using, and gives you a brief summary of how to use PSCP:
+
+Z:\owendadmin>pscp
+PuTTY Secure Copy client
+Release 0.60
+Usage: pscp [options] [user@]host:source target
+       pscp [options] source [source...] [user@]host:target
+       pscp [options] -ls [user@]host:filespec
+Options:
+  -V        print version information and exit
+  -pgpfp    print PGP key fingerprints and exit
+  -p        preserve file attributes
+  -q        quiet, don't show statistics
+  -r        copy directories recursively
+  -v        show verbose messages
+  -load sessname  Load settings from saved session
+  -P port   connect to specified port
+  -l user   connect with specified username
+  -pw passw login with specified password
+  -1 -2     force use of particular SSH protocol version
+  -4 -6     force use of IPv4 or IPv6
+  -C        enable compression
+  -i key    private key file for authentication
+  -noagent  disable use of Pageant
+  -agent    enable use of Pageant
+  -batch    disable all interactive prompts
+  -unsafe   allow server-side wildcards (DANGEROUS)
+  -sftp     force use of SFTP protocol
+  -scp      force use of SCP protocol
+
+(PSCP's interface is much like the Unix scp command, if you're familiar with that.) 
+
+
 
 pscp -scp Step_4_Deploy_Airflow_on_Docker.tar root@10.233.196.129:/home/milad/Desktop/Docker_Airflow
 
 ### Links
-1. https://arc.cdata.com/resources/mft/scp.rst
-2. 
+1. [what is SCP](https://arc.cdata.com/resources/mft/scp.rst
+2. [PSCP](https://the.earth.li/~sgtatham/putty/0.60/htmldoc/Chapter5.html)
+3. [install SSH](https://github.com/PowerShell/Win32-OpenSSH)
+4. [install Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
