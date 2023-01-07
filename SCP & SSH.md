@@ -23,8 +23,20 @@ It is a handy command for users that spend a lot of time on the SSH protocol, li
 SCP can be called more of a combination of RCP and SSH than a protocol because the file transfer is performed using RCP and the SSH protocol, which provides authentication and encryption. SCP maintains the confidentiality of the data being transferred and protects the authenticity by blocking packet sniffers from extracting valuable information from the data packets.
 
 
+### SCP & SSH by Windows 10 PowerShell CLI
 
+- make sure OpenSSH client is installed in Windows.
+  To verify, go to Start menu > Settings > Apps > optional features > scroll down and look for OpenSSH.
+  This adds SSH functionality to Windows,
+  and the user can use SSH from the Command Prompt (cmd.exe) or PowerShell.
+- PowerShell is recommended over cmd.exe. PowerShell lets you use more Unix/Linux commands. Though Powershell may give a disconnect error.
+- We recommend running both as Administrator.
+- DO NOT use the ssh command at all in the same Terminal window.
+  If you ssh into Tux, you won't be able to scp to/from your local computer (normally).
 
+Example of how to use SCP : [Samples](https://support.cci.drexel.edu/cci-virtual-lab-resources/scp-or-ssh-or-sftp-gui-or-cli/scp-windows-10-powershell-cli-command-line-interface/)
+
+pscp -scp Step_4_Deploy_Airflow_on_Docker.tar root@10.233.196.129:/home/milad/Desktop/Docker_Airflow
 
 ### Links
 1. https://arc.cdata.com/resources/mft/scp.rst
