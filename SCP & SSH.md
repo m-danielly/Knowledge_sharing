@@ -26,7 +26,7 @@ SCP can be called more of a combination of RCP and SSH than a protocol because t
 ### SCP & SSH by Windows 10 PowerShell CLI
 
 - make sure OpenSSH client is installed in Windows.
-  To verify, go to Start menu > Settings > Apps > optional features > scroll down and look for OpenSSH.
+  To verify, go to **Start menu > Settings > Apps > optional features > scroll down and look for OpenSSH.**
   This adds SSH functionality to Windows,
   and the user can use SSH from the Command Prompt (cmd.exe) or PowerShell.
 - PowerShell is recommended over cmd.exe. PowerShell lets you use more Unix/Linux commands. Though Powershell may give a disconnect error.
@@ -44,9 +44,11 @@ Quotes needed around the Desktop folder path on your computer because of the spa
 Also, need a backslash or \ after the quoted file path to indicate it's a folder.
 
 #### Example 2
-scp yourTuxUserid@tux.cs.drexel.edu:test.txt .
+`scp yourTuxUserid@tux.cs.drexel.edu:test.txt`
+
 or...
-scp mjg88@tux.cs.drexel.edu:test.txt .
+
+`scp mjg88@tux.cs.drexel.edu:test.txt`
 
 Copying a file named test.txt from your remote Tux home folder to your local Windows PC computer.
 The period at the end indicates that the file will be copied to the current directory or folder you are in within cmd.exe or PowerShell.
@@ -94,8 +96,8 @@ Options:
  
 (PSCP's interface is much like the Unix scp command, if you're familiar with that.) 
 
-shell
-```
+
+``` shell
 pscp -scp Step_4_Deploy_Airflow_on_Docker.tar root@10.233.196.129:/home/milad/Desktop/Docker_Airflow
 ```
 ### Links
